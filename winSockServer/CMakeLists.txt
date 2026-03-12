@@ -1,13 +1,12 @@
-cmake_minimum_required(VERSION 3.10)
-project(winSockServer)
+﻿# CMakeList.txt : CMake project for winSockServer, include source and define
+# project specific logic here.
+#
 
-# Force C++14 standard (required for <thread> and standard modern C++)
-set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
+# Add source to this project's executable.
+add_executable (winSockServer "winSockServer.cpp")
 
-# Create the executable
-add_executable(winSockServer winSockServer.cpp)
+if (CMAKE_VERSION VERSION_GREATER 3.12)
+  set_property(TARGET winSockServer PROPERTY CXX_STANDARD 20)
+endif()
 
-# Explicitly link the native Windows libraries
-# This bypasses any issues with #pragma comment(lib) being ignored by the build system
-target_link_libraries(winSockServer ws2_32 bcrypt)
+# TODO: Add tests and install targets if needed.

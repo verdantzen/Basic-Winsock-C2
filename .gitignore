@@ -1,4 +1,5 @@
 .vs/
+winSockServer/stealfile/
 
 # CMake / Build output directories
 out/
