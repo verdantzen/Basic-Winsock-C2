@@ -1,0 +1,22 @@
+.vs/
+
+# CMake / Build output directories
+out/
+build/
+
+# Compiled Object files
+*.obj
+
+# Compiled Dynamic libraries
+*.dll
+*.so
+*.dylib
+
+# Compiled Executables
+*.exe
+*.out
+*.app
+
+# Debugging artifacts
+*.pdb
+*.ilk
